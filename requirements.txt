@@ -1,0 +1,6 @@
+opencv-python  # from import cv2
+numpy
+fer            # for facial emotion recognition
+matplotlib
+Flask
+pandas
