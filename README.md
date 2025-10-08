@@ -92,12 +92,12 @@ Open the first terminal and run the backend server. Keep this window open—it n
 node src/server.js
 ```
 
-### Terminal 2: Run the Main Application
+### Terminal 2: Emotion detection
 
 Open a second terminal, ensure your virtual environment is activated, and run the main Python script.
 
 ```bash
-python main.py
+python emotion.py
 ```
 
 ## 🛑 Limitations and Future Scope
