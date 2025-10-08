@@ -69,6 +69,9 @@ These instructions will get you a copy of the project up and running on your loc
     ```bash
     pip install -r requirements.txt
     ```
+    ```bash
+    npm install @google/generative-ai express dotenv
+    ```
 
 4.  **Set up Environment Variables:**
     Create a file named **`.env`** in the root directory and add your API key:
