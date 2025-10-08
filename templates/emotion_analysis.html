@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h1 class="title">Chat History </h1>
+    <div class="container">
+        <div class="date-picker-container">
+            <input type="date" id="analysisDate" class="date-picker" onchange="fetchEmotionAnalysis(this.value)">
+        </div>
+        <div id="sessionAnalysis"></div>
+    </div>
+</div>
+
+<script>
+async function fetchEmotionAnalysis(date) {
+    try {
+        const dateObj = new Date(date);
+        const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+        const day = String(dateObj.getDate()).padStart(2, '0');
+        const year = dateObj.getFullYear();
+        const formattedDate = `${month}/${day}/${year}`;
+        
+        const response = await fetch(`/emotion-analysis/${formattedDate}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        displayEmotionAnalysis(data);
+    } catch (error) {
+        console.error('Error fetching emotion analysis:', error);
+        document.getElementById('sessionAnalysis').innerHTML = 
+            `<div class="error">Error loading sessions: ${error.message}</div>`;
+    }
+}
+
+function displayEmotionAnalysis(data) {
+    const analysisDiv = document.getElementById('sessionAnalysis');
+    
+    if (!data.sessions || data.sessions.length === 0) {
+        analysisDiv.innerHTML = '<div class="no-data">No sessions found for this date</div>';
+        return;
+    }
+    
+    let html = `<h3>Sessions for ${data.date}</h3>`;
+    html += '<div class="sessions-grid">';
+    data.sessions.forEach(session => {
+        html += `
+            <div class="session-card">
+                <div class="session-header">
+                    <span class="session-time">${session.time}</span>
+                </div>
+                <div class="session-summary">
+                    ${session.summary}
+                </div>
+            </div>
+        `;
+    });
+    html += '</div>';
+    analysisDiv.innerHTML = html;
+}
+
+// Initialize date picker
+document.addEventListener('DOMContentLoaded', function() {
+    const datePicker = document.getElementById('analysisDate');
+    const today = new Date().toISOString().split('T')[0];
+    datePicker.max = today;
+    datePicker.value = today;
+    fetchEmotionAnalysis(today);
+});
+</script>
+
+
+{% endblock %} 
