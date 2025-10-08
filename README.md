@@ -48,7 +48,7 @@ These instructions will get you a copy of the project up and running on your loc
   * A webcam and microphone (required for real-time multimodal detection)
   * A Google API Key with access to the **Gemini API**
 
-### Installation
+## Installation
 
 1.  **Clone the repository:**
 
@@ -71,13 +71,34 @@ These instructions will get you a copy of the project up and running on your loc
     ```
 
 4.  **Set up Environment Variables:**
-    Create a file named `.env` in the root directory and add your API key:
+    Create a file named **`.env`** in the root directory and add your API key:
 
     ```
     # Replace YOUR_GEMINI_API_KEY with your actual key
     GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
     ```
 
+-----
+
+## 5\. Run the Application
+
+This project requires **two separate terminals** running concurrently: one for the Node.js server and one for the Python component.
+
+### Terminal 1: Start the Server
+
+Open the first terminal and run the backend server. Keep this window open—it needs to stay running.
+
+```bash
+node src/server.js
+```
+
+### Terminal 2: Run the Main Application
+
+Open a second terminal, ensure your virtual environment is activated, and run the main Python script.
+
+```bash
+python main.py
+```
 
 ## 🛑 Limitations and Future Scope
 
