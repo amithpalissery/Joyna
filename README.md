@@ -54,8 +54,8 @@ These instructions will get you a copy of the project up and running on your loc
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/joyna-ai-companion.git
-    cd joyna-ai-companion
+    git clone https://github.com/amithpalissery/Joyna.git
+    cd joyna
     ```
 
 2.  **Create and activate a virtual environment (recommended):**
@@ -79,31 +79,6 @@ These instructions will get you a copy of the project up and running on your loc
     GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
     ```
 
-### Running the Application
-
-Joyna involves two main components: the core AI engine for real-time interaction and the Parental Dashboard.
-
-1.  **Run the Emotion detection file:**
-
-    ```bash
-    python emotion_detection.py
-    ```
-2.  **Run the Core AI Engine:**
-
-    ```bash
-    python main.py
-    ```
-
-3.  **Run the Parental Dashboard:**
-    In a separate terminal, start the Flask application:
-
-    ```bash
-    python main.py
-    ```
-
-    Access the dashboard in your browser at `http://127.0.0.1:5000` (default Flask port).
-
------
 
 ## 🛑 Limitations and Future Scope
 
