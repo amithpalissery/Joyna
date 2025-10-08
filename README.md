@@ -34,13 +34,9 @@ The Joyna system follows a structured pipeline for interaction:
 
 1. **Input Capture:** Microphone records speech, and the webcam captures video for facial expressions.
 2.  **Data Processing:** Speech is converted to text via ASR. NLP and emotion detection algorithms (including facial analysis) determine the child's sentiment and intent.
-3.  ]**Response Generation:** The Gemini-powered conversational AI uses the detected emotion and conversation history to generate an emotionally appropriate response.
+3.  **Response Generation:** The Gemini-powered conversational AI uses the detected emotion and conversation history to generate an emotionally appropriate response.
 4.  **Output & Logging:** Response is delivered via TTS and logged. Interaction summaries and emotion statistics are logged for the parental dashboard.
-
-A detailed workflow diagram is available in the `docs/` folder:
-
-> 
-
+ 
 -----
 
 ## 🚀 Getting Started
