@@ -19,7 +19,7 @@ if not cap.isOpened():
     exit()
 
 # Log file
-log_file = "D:/Main project/Chatbot/emotion_log.txt"
+log_file = "emotion_log.txt"
 output_folder = "emotion_session_data"
 os.makedirs(output_folder, exist_ok=True)
 
