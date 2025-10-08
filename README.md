@@ -149,5 +149,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://www.g
 
 -----
 
+<img width="1920" height="1080" alt="Screenshot 2025-02-16 161235" src="https://github.com/user-attachments/assets/bd8781cb-4c54-44e4-bc9d-3288a9a45b30" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-02-16 161258" src="https://github.com/user-attachments/assets/6e986ac1-c812-449b-ba4d-efd72d0d114d" />
 
 <img width="1920" height="1080" alt="Screenshot 2025-02-16 161335" src="https://github.com/user-attachments/assets/eaaf14c2-2aee-4095-bb5f-c8774225b1d8" />
