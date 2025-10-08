@@ -45,7 +45,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-  * Python 3.x
   * A webcam and microphone (required for real-time multimodal detection)
   * A Google API Key with access to the **Gemini API**
 
