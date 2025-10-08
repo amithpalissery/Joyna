@@ -85,22 +85,44 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## 5\. Run the Application
 
-This project requires **two separate terminals** running concurrently: one for the Node.js server and one for the Python component.
+This project is executed in three distinct stages: first, running two concurrent services, and finally, running the report generation script after the services are stopped.
 
-### Terminal 1: Start the Server
+-----
 
-Open the first terminal and run the backend server. Keep this window open—it needs to stay running.
+### Stage 1: Run Concurrent Services (Two Terminals)
+
+These two processes must run simultaneously to capture data.
+
+#### Terminal 1: Start the Server
+
+Open the first terminal and run the backend server. **Keep this window open** to allow the application to function.
 
 ```bash
 node src/server.js
 ```
 
-### Terminal 2: Emotion detection
+#### Terminal 2: Emotion Detection
 
-Open a second terminal, ensure your virtual environment is activated, and run the main Python script.
+Open a second terminal, ensure your virtual environment is activated, and run the Python script to start the webcam and emotion detection. **Keep this window open** to capture session data.
 
 ```bash
 python emotion.py
+```
+
+-----
+
+### Stage 2: Generate and View Parent Dashboard 
+
+When you are finished with the session, **close both Terminal 1 and Terminal 2** (by pressing `Ctrl+C` in each window) to stop the server and save all data.
+
+The final Python script will then process the saved data and display the results.
+
+#### Terminal 3: Access Parent Dashboard
+
+Run `main.py` to generate and view the results dashboard:
+
+```bash
+python main.py
 ```
 
 ## 🛑 Limitations and Future Scope
